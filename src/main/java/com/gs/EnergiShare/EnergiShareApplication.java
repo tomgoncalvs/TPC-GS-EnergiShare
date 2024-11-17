@@ -10,4 +10,8 @@ public class EnergiShareApplication {
 		SpringApplication.run(EnergiShareApplication.class, args);
 	}
 
+	public String home(){
+		return "TPC - Global Solution 2024";
+	}
+
 }

@@ -26,11 +26,11 @@ public class Energia {
 
     @NotNull(message = "{energia.quantidade_disponivel.notnull}")
     @Column(name = "quantidade_disponivel", nullable = false)
-    private Double quantidadeDisponivel;
+    private Integer quantidadeDisponivel;
 
     @DecimalMin(value = "0.0", inclusive = false, message = "{energia.preco_unitario.min}")
-    @Column(name = "preco_unitario", precision = 10, scale = 2)
-    private Double precoUnitario;
+    @Column(name = "preco_unitario")
+    private Integer precoUnitario;
 
     @Builder.Default
     @Column(name = "data_geracao", updatable = false)

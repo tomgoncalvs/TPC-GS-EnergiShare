@@ -26,11 +26,11 @@ public class Transacao {
 
     @NotNull(message = "{transacao.quantidade.notnull}")
     @Column(name = "quantidade", nullable = false)
-    private Double quantidade;
+    private Integer quantidade;
 
     @DecimalMin(value = "0.0", inclusive = false, message = "{transacao.valor_total.min}")
-    @Column(name = "valor_total", precision = 10, scale = 2)
-    private Double valorTotal;
+    @Column(name = "valor_total")
+    private Integer valorTotal;
 
     @Builder.Default
     @Column(name = "data_transacao", updatable = false)
