@@ -10,13 +10,14 @@ public class EnergiShareApplication {
 
 	public static void main(String[] args) {
 		Dotenv dotenv = Dotenv.configure().load();
-		System.setProperty("OPEN_AI_API_KEY", dotenv.get("OPEN_AI_API_KEY"));
-
+		String apiKey = dotenv.get("OPEN_AI_API_KEY");
+		
+		if (apiKey == null || apiKey.isEmpty()) {
+			throw new IllegalStateException("A chave da API OpenAI não foi encontrada no arquivo .env");
+		}
+	
+		System.setProperty("OPEN_AI_API_KEY", apiKey);
+	
 		SpringApplication.run(EnergiShareApplication.class, args);
 	}
-
-	public String home(){
-		return "TPC - Global Solution 2024";
-	}
-
-}
+}	
