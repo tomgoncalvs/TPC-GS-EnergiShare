@@ -4,6 +4,7 @@ public class ChatMessage {
     private String content;
     private String response;
     private String email;
+    private boolean toAi;
 
     // Getters e Setters
     public String getContent() {
@@ -28,5 +29,13 @@ public class ChatMessage {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isToAi() {
+        return toAi;
+    }
+    
+    public void setToAi(boolean toAi) {
+        this.toAi = toAi;
     }
 }
