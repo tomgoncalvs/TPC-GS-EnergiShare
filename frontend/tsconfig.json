@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2016",                              /* Define o padrão ECMAScript alvo. */
+    "module": "ESNext",                              /* Define o padrão de módulo usado. */
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],        /* Inclui bibliotecas do DOM e ECMAScript. */
+    "allowJs": true,                                 /* Permite arquivos .js no projeto. */
+    "skipLibCheck": true,                            /* Ignora a checagem de tipos em arquivos .d.ts. */
+    "esModuleInterop": true,                         /* Facilita a interoperabilidade com módulos CommonJS. */
+    "allowSyntheticDefaultImports": true,            /* Permite importações padrão de módulos sem exports padrão. */
+    "strict": true,                                  /* Ativa todas as verificações de tipo estritas. */
+    "forceConsistentCasingInFileNames": true,        /* Garante consistência de maiúsculas e minúsculas nos imports. */
+    "noEmit": true,                                  /* Não gera arquivos de saída (somente para checagem de tipos). */
+    "isolatedModules": true,                         /* Garante que cada arquivo possa ser compilado de forma isolada. */
+    "resolveJsonModule": true,                       /* Permite a importação de arquivos JSON. */
+    "jsx": "react-jsx",                              /* Define o modo JSX para o React 17 ou superior. */
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",                      /* Usa a resolução de módulos do Node.js. */
+    "baseUrl": "./",                                 /* Define o diretório base para resolver caminhos relativos. */
+    "paths": {                                       /* Define atalhos para importações. */
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@api/*": ["src/api/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+
+    /* Advanced Options */
+    "typeRoots": ["./node_modules/@types"],          /* Diretórios para buscar definições de tipos. */
+    "types": ["node"],                               /* Tipos globais incluídos no projeto. */
+    "noFallthroughCasesInSwitch": true               /* Impede que casos no switch passem sem um break. */
+  },
+  "include": ["src/**/*"],                            /* Inclui todos os arquivos na pasta src. */
+  "exclude": ["node_modules", "dist"]                 /* Exclui pastas desnecessárias. */
+}
